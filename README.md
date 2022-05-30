@@ -57,11 +57,7 @@ Open _Terminal/Shell_ inside your _VSCode_ and run
 
 ## Authors
 
-👤 **Steve**
-
-- GitHub: [@sntakirutimana72](../../../)
-
- **Nadezhda**
+👤 **Nadezhda**
 
 - GitHub: [@petushka1](https://github.com/petushka1)
 

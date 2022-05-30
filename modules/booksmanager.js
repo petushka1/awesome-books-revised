@@ -1,4 +1,4 @@
-import Book from './book.js'
+import Book from './book.js';
 
 const bookUniqueId = 'bookStorage';
 
@@ -7,7 +7,7 @@ class BooksManager {
     const idCounterTemp = localStorage.getItem('idCounter');
 
     if (idCounterTemp !== null) {
-      this.idCounter = parseInt(idCounterTemp);
+      this.idCounter = parseInt(idCounterTemp, 10);
     } else {
       this.idCounter = 0;
     }
@@ -27,7 +27,8 @@ class BooksManager {
   }
 
   add(title, author) {
-    const newBook = new Book(++this.idCounter, title, author);
+    this.idCounter += 1;
+    const newBook = new Book(this.idCounter, title, author);
     this.books.push(newBook);
     localStorage.setItem(bookUniqueId, JSON.stringify(this.books));
     localStorage.setItem('idCounter', this.idCounter);
@@ -43,4 +44,5 @@ class BooksManager {
   }
 }
 
-export const booksManager = new BooksManager();
+const booksManager = new BooksManager();
+export default booksManager;

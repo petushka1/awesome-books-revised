@@ -1,7 +1,6 @@
-import { booksManager } from './booksmanager.js';
+import booksManager from './booksmanager.js';
 
 const booksList = document.querySelector('.books-list');
-
 
 const renderBook = (book) => {
   const bookItem = document.createElement('div');
@@ -13,7 +12,7 @@ const renderBook = (book) => {
   `;
 
   return bookItem;
-}
+};
 
 const toggleBooksListClasses = (force) => booksList.classList.toggle('empty-list', force);
 
@@ -24,28 +23,28 @@ const populateBooks = () => {
   if (!booksManager.isEmpty()) {
     toggleBooksListClasses(false);
   }
-}
+};
 
 const remove = (e) => {
   if (e.target.classList.contains('btn')) {
     const bookItem = e.target.parentElement;
-    bookItem.style.display = 'none';
-    booksManager.remove(parseInt(bookItem.id));
+    booksManager.remove(parseInt(bookItem.id, 10));
+    bookItem.remove();
 
     if (booksManager.isEmpty()) {
       toggleBooksListClasses(true);
     }
   }
-}
+};
 
 const add = (event) => {
   event.preventDefault();
   toggleBooksListClasses(false);
-  const book = booksManager.add(this.elements.title.value,
-    this.elements.author.value);
+  const book = booksManager.add(event.target.elements.title.value,
+    event.target.elements.author.value);
   booksList.appendChild(renderBook(book));
 
   document.body.querySelector('.listStyle a').click();
-}
+};
 
-export {remove, add, populateBooks};
+export { remove, add, populateBooks };

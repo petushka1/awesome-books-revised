@@ -57,6 +57,10 @@ main {
   background: rgb(185, 182, 182);
 }
 
+.bookItem:nth-child(even) {
+  background: #fff;
+}
+
 .btn {
   border-radius: 2px;
   box-shadow: 0 0 3px black;
