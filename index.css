@@ -1,0 +1,172 @@
+/* Here you apply all kinds of styling to your app UIs */
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 500px;
+  padding: 15px;
+  margin: 0 auto;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+.books-manager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.books-manager h1 {
+  text-align: center;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.books-list {
+  width: 100%;
+  border: 2px solid #272727;
+}
+
+.books-list.empty-list {
+  border: none;
+}
+
+.bookItem {
+  padding: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bookItem:nth-child(odd) {
+  background: rgb(185, 182, 182);
+}
+
+.bookItem:nth-child(even) {
+  background: #fff;
+}
+
+.btn {
+  border-radius: 2px;
+  box-shadow: 0 0 3px black;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 16px;
+  padding-top: 15px;
+  max-width: 300px;
+}
+
+form h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.field {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  padding: 5px;
+  border: 1px solid #272727;
+  box-shadow: 0 0 3px black;
+}
+
+.field:focus {
+  outline: none;
+  border: 2px solid blue;
+}
+
+input[type='submit'] {
+  max-width: fit-content;
+  align-self: flex-end;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 3px #272727;
+  cursor: pointer;
+}
+
+/* navbar styles */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#dateTime {
+  align-self: flex-end;
+}
+
+.listStyle {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+}
+
+.listStyle a:hover,
+.listStyle a:focus,
+.listStyle a.active {
+  padding: 5px 8px;
+  border-radius: 4px;
+  box-shadow: 0 0 3px black;
+}
+
+.listStyle a.active {
+  color: blue;
+}
+
+.listStyle li {
+  border-right: solid black 2px;
+  padding-right: 10px;
+}
+
+.listStyle li:last-child {
+  border: none;
+  padding: none;
+}
+
+.invisible {
+  display: none;
+}
+
+.section {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.section h2 {
+  text-align: center;
+}

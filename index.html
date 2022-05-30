@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Awesome Books</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <script type="module" src="index.js"></script>
+    </head>
+    <body>
+        <main>
+            <header id="header">
+              <div class="wrapper">
+                <h3>Awesome Books</h3>
+                <nav class="nav">
+                <ul class="listStyle">
+                    <li><a href="#list" class="active">List</a></li>
+                    <li><a href="#add">Add new</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                </nav>
+              </div>
+              <div id='dateTime'></div>
+            </header>
+
+            <section id="list" class="books-manager section">
+                <h1>All awesome books</h1>
+
+                <div class="books-list empty-list"></div>
+
+            </section>
+
+            <section id="add" class="section invisible">
+              <div>
+                <form action="#" class="books-creator">
+                    <h2>Add a new book</h2>
+                    <input type="text" class="field" name="title" placeholder="Title" required>
+                    <input type="text" class="field" name="author" placeholder="Author" required>
+                    <input type="submit" value="Add">
+                </form>
+              </div>
+            </section>
+
+            <section id="contact" class="section invisible">
+              <h2>Contact information</h2>
+              <p>Do have questions or you want to say "Hello"?
+                You can reach out to us!
+              </p>
+              <ul>
+                <li>Our e-mail: <a href="mailto:joe@example.com?subject=feedback">mail@mail.com</a></li>
+                <li>Our phone number: 0043586534422</li>
+                <li>Our address: Streetname 22, 84503 City, Country</li>
+              </ul>
+            </section>
+
+            <footer>
+              <p>Copyright Nadya 2022</p>
+            </footer>
+        </main>
+    </body>
+</html>
