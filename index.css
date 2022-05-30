@@ -112,8 +112,17 @@ a {
 
 #header {
   display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#dateTime {
+  align-self: flex-end;
 }
 
 .listStyle {
